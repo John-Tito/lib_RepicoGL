@@ -1,54 +1,63 @@
-# Template
+# PicoTK
 
-This library provides a template for my libs.
+This library provides a lightweight OpenGL-based framework based on PicoGL.
 
 ---
 
 ## Compatibility
 
-This library has not been tested.
+This library has been tested on esp32-wrover-b.
 
 ---
 
 ## Installation
 
-1. Download the template.h and template.c files.
-2. Add both files to your project directory.
-3. Include template.h in the main application.
+1. Download the library from the official repository.
+2. Add the header files and source files to your project directory.
 
 ---
 
 ## Usage
 
-1. Use function() to call function.
+1. Implement your own initialization function and update function for updates.
+2. Initialize the user interface by calling "ui_init()" function with your own initialization function and update function as arguments.
+3. Call "ui_loop()" function to enter event loop and handle user interface events.
+4. Call "ui_end()" function to release resources used for UI.
 
 ---
 
 ## Sample Code
 
-```c
-
-#include "template.h"
-
-void setup()
-{
-    function();
-}
-
-```
+see example folder
 
 ---
 
 ## API Reference
 
-***function()***
+***ui_init(void (*init_fn)(void), int (*update_fn)(void))***
 
-Call the function fuction.
+Initialize the user interface with your own initialization function and update function. Returns 0 on success, -1 otherwise.
 
-Parameters.
+Parameters:
 
-- None
+- `init_fn`: a function pointer to your own initialization function.
+- `update_fn`: a function pointer to your own update function for GUI logic updates.
+
+***ui_loop()***
+
+Main function to enter event loop and handle user interface events.
+
+***ui_end()***
+
+Release resources used for UI.
+
+***tkSwapBuffers()***
+
+Swap buffers to update the screen.
+
+---
 
 ## Reference/Quote
 
-1. [reference name](reference.url).[author name](author.url)
+1. [kaaass's blog](https://blog.kaaass.net/archives/1340).
+2. [PicoGL](https://www.pico.net/kb/picogl). Pico.
