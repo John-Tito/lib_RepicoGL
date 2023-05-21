@@ -61,4 +61,3 @@
 ## 引用/引述
 
 1. [kaaass 的博客](https://blog.kaaass.net/archives/1340).
-2. [PicoGL](https://www.pico.net/kb/picogl). Pico.

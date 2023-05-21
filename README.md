@@ -60,4 +60,3 @@ Swap buffers to update the screen.
 ## Reference/Quote
 
 1. [kaaass's blog](https://blog.kaaass.net/archives/1340).
-2. [PicoGL](https://www.pico.net/kb/picogl). Pico.
